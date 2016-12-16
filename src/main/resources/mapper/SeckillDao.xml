@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--需要映射的dao-->
+<mapper namespace="org.test.dao.TestDao">
+    <select id="queryById" resultType="org.test.entity.Seckill">
+    SELECT
+    seckill_id,name,number,start_time,end_time,create_time
+    FROM
+    seckill
+    WHERE
+    seckill_id=#{seckillId}
+  </select>
+</mapper>
